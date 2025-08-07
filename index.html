@@ -37,22 +37,7 @@
           await window.magicchat_io.setUp(
             "<YOUR_MAGICCHAT_API_NAME>", // app_name
             "<YOUR_MAGICCHAT_API_KEY>", // api_key
-            JSON.stringify({
-              header_theme: {
-                backgroundColor: "rgb(163, 112, 206)",
-                textColor: "white",
-              },
-              chat_opener_theme: {
-                backgroundColor: "rgb(163, 112, 206)",
-                textColor: "white",
-              },
-              chat_box_theme: {
-                backgroundColor: "red",
-                textColor: "black",
-              },
-            }), // theme
-            true, // header_req
-            "/", // redirect_uri
+           false, // header_req (true by default)
           );
 
         } 
