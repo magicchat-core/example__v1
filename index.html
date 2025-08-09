@@ -13,7 +13,8 @@
     />
 
     <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.1.8/bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.1.8/bundle.js"></script> -->
+    <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script>
 
 
     
@@ -32,25 +33,18 @@
     -->
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
-        const token = localStorage.getItem("tezkit_token");
-        if (!token) {
-          await window.magicchat_io.setUp(
-            "<YOUR_MAGICCHAT_API_NAME>", // app_name
-            "<YOUR_MAGICCHAT_API_KEY>", // api_key
-           false, // header_req (true by default)
-          );
+            await window.magicchat_io.setUp(
+                "test_v1", // app_name
+                "bGVnYWwxMTFfX1NFUFJBVE9SX190ZXN0X3Yx", // api_key
+              false, // header_req (true by default)
+              );
+              
+            await window.magicchat_io.initialize({"app_version":"V1"});
 
-        } 
+
       });
     </script>    
-    <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-        const token = localStorage.getItem("tezkit_token");
-        if (token) {
-          await window.magicchat_io.initialize(token);
-        } 
-      });
-    </script>
+
 
 
 

@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  walk(document.body);
+  // walk(document.body);
 });
