@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generic Product Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="skeletonStyle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.2.7/bundle.js"></script>
+
+
+    
+    <!-- 
+      To display the MagicChat chatbox on **all pages**, 
+      you can combine both `setUp` and `initialize` into a single <script> block.
+
+      If you only want to show the chatbox on **specific pages**, 
+      it’s better to separate the logic:
+        - Call `setUp` once globally — typically on a common screen like the logout/Home page 
+          (i.e. the screen shown immediately after a user logs out), as recommended in the documentation.
+        - Call `initialize` only on the pages where the chatbox should be active.
+
+      This approach keeps the setup modular and reusable — 
+      allowing you to configure MagicChat just once, and activate it only where needed.
+    -->
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+            await window.magicchat_io.setUp(
+              "<MAGICCHAT_APP_NAME>", // app_name
+              "<MAGICCHAT_API_KEY>", // api_key
+              false, // header_req (true by default)
+              );
+              
+            await window.magicchat_io.initialize({"app_version":"V1"});
+
+
+      });
+    </script>    
+
+
+
+
+     
+    
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
+            alt="logo"
+          />
+        </div>
+        <div class="logo">
+          <div>Simple Site Examples</div>
+        </div>
+        <div class="burger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="right-nav">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div id="tezkit-auth-area" style="min-width: 200px"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="contentWrap">
+      <main>
+        <section id="intro" class="banner-section">
+          <div class="banner">
+            <img
+              src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
+              alt="Placeholder Banner"
+              class="hero-image"
+            />
+          </div>
+          <div class="text-overlay">
+            <div class="content is-loading">
+              <h2>Discover Our Amazing Products</h2>
+              <p>
+                Explore our wide range of innovative and high-quality products
+                designed to meet your needs. Experience excellence and
+                reliability with every purchase.
+              </p>
+              <button class="btn">Learn More</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="products" class="product-section">
+          <h3>Our Products</h3>
+
+          <div class="product-grid">
+            <div class="cards">
+              <div class="card is-loading">
+                <div class="image"></div>
+                <div class="content">
+                  <h2></h2>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card is-loading">
+                <div class="image"></div>
+                <div class="content">
+                  <h2></h2>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card is-loading">
+                <div class="image"></div>
+                <div class="content">
+                  <h2></h2>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="about-section">
+          <h3>About Us</h3>
+          <div class="about-content is-loading">
+            <img
+              src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
+              alt="About Us Image"
+            />
+
+            <div class="text">
+              <h2>Who We Are</h2>
+              <p>
+                We are a passionate team of professionals dedicated to creating
+                innovative products that make life easier and more enjoyable.
+                Our company was founded with the mission to provide
+                high-quality, reliable products that cater to a wide variety of
+                needs. With a focus on excellence and customer satisfaction, we
+                aim to be a leader in our industry.
+              </p>
+              <div class="listItem">
+                <h4>Our Values</h4>
+                <ul>
+                  <li>
+                    Customer Satisfaction: We put our customers at the center of
+                    everything we do.
+                  </li>
+                  <li>
+                    Innovation: Constantly exploring new ways to improve our
+                    products and services.
+                  </li>
+                  <li>
+                    Integrity: We conduct our business with honesty and
+                    transparency.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <h3>Contact Us</h3>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h4>Our Office</h4>
+              <p>
+                <strong>Generic Company</strong><br />
+                123 Main Street, Anytown, USA<br />
+                Phone: (123) 456-7890<br />
+                Email: contact@genericcompany.com
+              </p>
+            </div>
+            <div class="contact-form">
+              <h4>Get In Touch</h4>
+              <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><strong>Generic Company</strong></p>
+            <p>123 Main Street, Anytown, USA</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Disclaimer</h4>
+            <p>
+              The content on this website is for informational purposes only and
+              does not constitute a guarantee of product performance. Please
+              contact us for more details.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Stay Connected</h4>
+            <ul class="social-links">
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2024 Generic Company. All Rights Reserved. | Designed by
+            <a href="#">YourName</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const burgerIcon = document.querySelector(".burger-icon");
+      const rightNav = document.querySelector(".right-nav");
+
+      burgerIcon.addEventListener("click", (e) => {
+        rightNav.style.display =
+          rightNav.style.display === "block" ? "none" : "block";
+        e.stopPropagation();
+      });
+
+      document.addEventListener("click", (e) => {
+        const clickOutsideNav =
+          rightNav.contains(e.target) || burgerIcon.contains(e.target);
+        if (!clickOutsideNav) {
+          if (rightNav.style.display) {
+            rightNav.style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
