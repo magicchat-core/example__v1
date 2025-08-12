@@ -12,38 +12,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.2.8/bundle.js"></script>
-
-
-    
-    <!-- 
-      To display the MagicChat chatbox on **all pages**, 
-      you can combine both `setUp` and `initialize` into a single <script> block.
-
-      If you only want to show the chatbox on **specific pages**, 
-      it’s better to separate the logic:
-        - Call `setUp` once globally — typically on a common screen like the logout/Home page 
-          (i.e. the screen shown immediately after a user logs out), as recommended in the documentation.
-        - Call `initialize` only on the pages where the chatbox should be active.
-
-      This approach keeps the setup modular and reusable — 
-      allowing you to configure MagicChat just once, and activate it only where needed.
-    -->
-    <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-            await window.magicchat_io.setUp(
-              "<MAGICCHAT_APP_NAME>", // app_name
-              "<MAGICCHAT_API_KEY>", // api_key
-              false, // header_req (true by default)
-              );
-              
-            await window.magicchat_io.initialize({"app_version":"V1"});
-
-
-      });
-    </script>    
-
 
 
 
@@ -73,7 +41,8 @@
             <li><a href="#products">Products</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <div id="tezkit-auth-area" style="min-width: 200px"></div>
+   
+          
         </div>
       </nav>
     </header>
