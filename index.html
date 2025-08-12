@@ -13,8 +13,8 @@
     />
 
     <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.1.8/bundle.js"></script> -->
-    <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.2.9/bundle.js"></script>
+    <!-- <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script> -->
 
 
     
@@ -36,7 +36,7 @@
             await window.magicchat_io.setUp(
                 "test_v1", // app_name
                 "bGVnYWwxMTFfX1NFUFJBVE9SX190ZXN0X3Yx", // api_key
-              false, // header_req (true by default)
+              true, // header_req (true by default)
               );
               
             await window.magicchat_io.initialize({"app_version":"V1"});
