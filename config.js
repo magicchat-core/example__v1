@@ -1,0 +1,6 @@
+// config.js
+window.__APP_CONFIG__ = {
+  APP_NAME: "v1_app1_pw_1758807068771",
+  API_KEY: "VGVzdFBhcnRuZXIxX19TRVBSQVRPUl9fdjFfYXBwMV9wd18xNzU4ODA3MDY4Nzcx",
+  APP_VERSION: "V1"
+};

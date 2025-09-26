@@ -13,8 +13,8 @@
     />
 
     <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.2.9/bundle.js"></script>
-    <!-- <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/magicchat-core/prod-ssc-client-cdns@v0.2.9/bundle.js"></script> -->
+    <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script>
 
 
     
@@ -31,20 +31,32 @@
       This approach keeps the setup modular and reusable — 
       allowing you to configure MagicChat just once, and activate it only where needed.
     -->
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", async function () {
             await window.magicchat_io.setUp(
-                "test_v1", // app_name
-                "bGVnYWwxMTFfX1NFUFJBVE9SX190ZXN0X3Yx", // api_key
-              true, // header_req (true by default)
+                "v1app1", // app_name
+                "VGVzdFBhcnRuZXIxX19TRVBSQVRPUl9fdjFhcHAx", // api_key
+              false, // header_req (true by default)
               );
               
             await window.magicchat_io.initialize({"app_version":"V1"});
 
 
       });
-    </script>    
+    </script>     -->
 
+<script src="./config.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", async function () {
+    await window.magicchat_io.setUp(
+      window.__APP_CONFIG__.APP_NAME,
+      window.__APP_CONFIG__.API_KEY,
+      false
+    );
+    await window.magicchat_io.initialize({ app_version: window.__APP_CONFIG__.APP_VERSION });
+  });
+</script>
 
 
 
