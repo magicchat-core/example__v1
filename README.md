@@ -27,12 +27,13 @@ example__v1/
 1. Clone this repository
 
 git clone -b starter https://github.com/magicchat-io/example__v1.git
+
+
+2. Navigate to repo and Install dependencies
 cd example__v1
-2. Install dependencies
-
 npm install
-3. Start the local dev server
 
+4. Start the local dev server
 npm start
 Then open http://localhost:8080 in your browser. You'll see a simple site with MagicChat already integrated.
 
