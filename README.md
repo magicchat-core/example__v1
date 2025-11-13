@@ -39,7 +39,7 @@ Copy code
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/magicchat-io/example__v1.git
+1. git clone -b starter https://github.com/magicchat-io/example__v1.git
 cd example__v1
 2. Install dependencies
 bash
