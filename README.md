@@ -30,7 +30,7 @@ example__v1/
 └── package.json # Local dev server config
 
 yaml
-Copy code
+
 
 ---
 
@@ -43,21 +43,23 @@ Copy code
 cd example__v1
 2. Install dependencies
 bash
-Copy code
+
 npm install
 3. Start the local dev server
 bash
-Copy code
+
 npm start
 Then open http://localhost:8080 in your browser.
 You’ll see a simple site with MagicChat already integrated.
 
 🧪 Try It Instantly
-If you don’t have your own app or site yet, no problem — you can use this project as a sandbox.
-Just open it, edit the MagicChat script section, and plug in your App ID or API key.
+If you don’t have your own app or site yet — no problem!
+You can use this project as a sandbox to test MagicChat.
+
+Just open index.html, edit the MagicChat script section, and plug in your App ID or API key from the MagicChat Admin Console.
 
 📚 Learn More
-🏠 magicchat.io — Home page
+🏠 MagicChat.io — Home page
 
 🧠 Developers Docs — Full integration guide & SDK details
 
@@ -75,3 +77,4 @@ Extend it into your own integration project
 
 🛠 License
 MIT © MagicChat.io
+
