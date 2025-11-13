@@ -38,15 +38,15 @@ yaml
 
 ### 1. Clone this repository
 
-```bash
+```
 1. git clone -b starter https://github.com/magicchat-io/example__v1.git
 cd example__v1
 2. Install dependencies
-bash
+
 
 npm install
 3. Start the local dev server
-bash
+
 
 npm start
 Then open http://localhost:8080 in your browser.
