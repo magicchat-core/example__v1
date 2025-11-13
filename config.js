@@ -1,0 +1,6 @@
+// config.js
+window.__APP_CONFIG__ = {
+  APP_NAME: "<YOUR_MAGICCHAT_APP_NAME>",
+  API_KEY: "<YOUR_MAGICCHAT_API_KEY>",
+  APP_VERSION: "V1"
+};
