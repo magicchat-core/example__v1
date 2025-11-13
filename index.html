@@ -14,36 +14,7 @@
 
     <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
     <script src="https://magicchat-core.github.io/prod-ssc-client-cdns/bundle.js"></script>
-    <!-- <script src="node_modules/chathead-consumer-client/dist/bundle.js"></script> -->
-
-
-    
-    <!-- 
-      To display the MagicChat chatbox on **all pages**, 
-      you can combine both `setUp` and `initialize` into a single <script> block.
-
-      If you only want to show the chatbox on **specific pages**, 
-      it’s better to separate the logic:
-        - Call `setUp` once globally — typically on a common screen like the logout/Home page 
-          (i.e. the screen shown immediately after a user logs out), as recommended in the documentation.
-        - Call `initialize` only on the pages where the chatbox should be active.
-
-      This approach keeps the setup modular and reusable — 
-      allowing you to configure MagicChat just once, and activate it only where needed.
-    -->
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-            await window.magicchat_io.setUp(
-                "v1app1", // app_name
-                "VGVzdFBhcnRuZXIxX19TRVBSQVRPUl9fdjFhcHAx", // api_key
-              false, // header_req (true by default)
-              );
-              
-            await window.magicchat_io.initialize({"app_version":"V1"});
-
-
-      });
-    </script>     -->
+   
 
 <script src="./config.js"></script>
 
